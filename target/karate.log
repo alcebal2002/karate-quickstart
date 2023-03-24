@@ -1,37 +1,16 @@
-17:04:43.381 [main] INFO  runners.DemoRunner - Running beforeAll()
-17:04:43.389 [main] INFO  runners.DemoRunner - Running testDemo
-17:04:43.401 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': demo
-17:04:44.363 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-17:04:44.366 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config-demo.js
-17:04:45.734 [main] INFO  com.intuit.karate - executing karate-config-demo... 
-17:04:45.780 [main] INFO  com.intuit.karate - executing karate-config-demo... 
-17:04:45.785 [main] INFO  com.intuit.karate - karate.env system property set to demo 
-17:04:45.896 [main] INFO  com.intuit.karate - {
-  "services": {
-    "database": {
-      "host": "localhost",
-      "port": 5432
-    }
-  },
-  "application": {
-    "datasource": {
-      "jdbcUrl": "jdbc:database://${services.database.host}:${services.database.port}/database"
-    }
-  }
-}
- 
-17:04:45.956 [main] INFO  com.intuit.karate - [print] background setup 
-17:04:45.959 [main] INFO  com.intuit.karate - [print] baseUrl: http://localhost:8082 
-17:04:45.961 [main] INFO  com.intuit.karate - [print] demo scenario 
-17:04:45.974 [main] ERROR com.intuit.karate - classpath:features/demo.feature:10
-* print 'jdbcUrl: ' + database.jdbcUrl
-js failed:
->>>>
-01: karate.log('[print]','jdbcUrl: ' + database.jdbcUrl)
-<<<<
-org.graalvm.polyglot.PolyglotException: ReferenceError: "database" is not defined
-- <js>.:program(Unnamed:1)
-
-classpath:features/demo.feature:10
-17:04:46.811 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) classpath:features/demo.feature
-17:04:47.064 [main] INFO  runners.DemoRunner - Running afterAll()
+17:31:52.750 [main] INFO  runners.DemoRunner - Running beforeAll()
+17:31:52.760 [main] INFO  runners.DemoRunner - Running testDemo
+17:31:52.773 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': demo
+17:31:53.750 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+17:31:53.753 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config-demo.js
+17:31:54.835 [main] INFO  com.intuit.karate - executing karate-config-demo... 
+17:31:54.905 [main] INFO  com.intuit.karate - executing karate-config-demo... 
+17:31:54.916 [main] INFO  com.intuit.karate - karate.env system property set to demo 
+17:31:55.069 [main] INFO  com.intuit.karate - yaml: [object Object] 
+17:31:55.285 [main] INFO  com.intuit.karate - config: {"database":{"jdbcUrl":"jdbc:database://localhost:5432/database"}} 
+17:31:55.305 [main] INFO  com.intuit.karate - [print] background setup 
+17:31:55.309 [main] INFO  com.intuit.karate - [print] baseUrl: http://localhost:8082 
+17:31:55.311 [main] INFO  com.intuit.karate - [print] demo scenario 
+17:31:55.314 [main] INFO  com.intuit.karate - [print] jdbcUrl: jdbc:database://localhost:5432/database 
+17:31:55.965 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:features/demo.feature
+17:31:56.166 [main] INFO  runners.DemoRunner - Running afterAll()

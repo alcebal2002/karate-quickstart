@@ -39,8 +39,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">0</div>
-      <div id="nav-fail" class="bg-danger">1</div>
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
   <div id="nav-env">
@@ -50,12 +50,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2023-03-24 05:04:45 p. m.</div>
+    <div>2023-03-24 05:31:55 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item failed">
+          <div class="nav-item passed">
             <a href="#[1:8]"><span>[1:8]</span> <span>Demo Scenario</span></a>
           </div>
         </div>
@@ -81,8 +81,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>17</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>9</span>
             </div>
           </div>
           <div class="step-row">
@@ -105,7 +105,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>print &#39;background setup&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -114,24 +114,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.5">17:04:45.736 executing karate-config-demo... 
-17:04:45.780 executing karate-config-demo... 
-17:04:45.785 karate.env system property set to demo 
-17:04:45.901 {
-  &quot;services&quot;: {
-    &quot;database&quot;: {
-      &quot;host&quot;: &quot;localhost&quot;,
-      &quot;port&quot;: 5432
-    }
-  },
-  &quot;application&quot;: {
-    &quot;datasource&quot;: {
-      &quot;jdbcUrl&quot;: &quot;jdbc:database://${services.database.host}:${services.database.port}/database&quot;
-    }
-  }
-}
- 
-17:04:45.956 [print] background setup 
+  <div class="preformatted" data-parent="0.5">17:31:54.836 executing karate-config-demo... 
+17:31:54.906 executing karate-config-demo... 
+17:31:54.917 karate.env system property set to demo 
+17:31:55.069 yaml: [object Object] 
+17:31:55.290 config: {&quot;database&quot;:{&quot;jdbcUrl&quot;:&quot;jdbc:database://localhost:5432/database&quot;}} 
+17:31:55.305 [print] background setup 
 </div>   
 
   
@@ -151,7 +139,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>print &#39;baseUrl: &#39; + baseUrl</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -160,7 +148,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.6">17:04:45.960 [print] baseUrl: http://localhost:8082 
+  <div class="preformatted" data-parent="0.6">17:31:55.310 [print] baseUrl: http://localhost:8082 
 </div>   
 
   
@@ -189,7 +177,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.9">17:04:45.962 [print] demo scenario 
+  <div class="preformatted" data-parent="0.9">17:31:55.312 [print] demo scenario 
 </div>   
 
   
@@ -203,13 +191,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.10">
-      <div class="step-ref failed">10</div>
+      <div class="step-ref passed">10</div>
       
-      <div class="step-cell failed">
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>print &#39;jdbcUrl: &#39; + database.jdbcUrl</span>
       </div>
     </div>
-    <div class="time-cell failed">12</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -218,16 +206,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.10">17:04:45.975 classpath:features/demo.feature:10
-* print &#39;jdbcUrl: &#39; + database.jdbcUrl
-js failed:
-&gt;&gt;&gt;&gt;
-01: karate.log(&#39;[print]&#39;,&#39;jdbcUrl: &#39; + database.jdbcUrl)
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;database&quot; is not defined
-- &lt;js&gt;.:program(Unnamed:1)
-
-classpath:features/demo.feature:10
+  <div class="preformatted" data-parent="0.10">17:31:55.315 [print] jdbcUrl: jdbc:database://localhost:5432/database 
 </div>   
 
   

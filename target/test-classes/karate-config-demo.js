@@ -3,7 +3,7 @@ function fn() {
     karate.log('karate.env system property set to ' + karate.env);
     const configYaml = karate.read('classpath:application-demo.yml');
 
-    karate.log(configYaml);
+    karate.log('yaml: ' + configYaml);
 
     let config = {
         database: {
@@ -12,7 +12,9 @@ function fn() {
     };
 
     let replacePlaceholders = karate.read('classpath:js/replace.js');
-    config = replacePlaceholders(config, configYaml);
+    config = JSON.parse(replacePlaceholders(JSON.stringify(config), JSON.stringify(configYaml)));
+
+    karate.log('config: ' + JSON.stringify(config));
 
     return config;
 }
