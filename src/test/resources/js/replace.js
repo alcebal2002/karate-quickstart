@@ -47,7 +47,7 @@ function fn(jsonData, yamlData) {
         let result = inputString;
         try {
             result = JSON.parse(inputString);
-            console.log('Input parsed as Json');
+            console.log('Input parsed as Json: ' + JSON.stringify(result));
             isJson = true;
         } catch (e) {
             console.log('Unable to parse input as Json. Assuming String');
