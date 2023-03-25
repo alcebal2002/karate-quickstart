@@ -1,7 +1,0 @@
-services:
-  database:
-    host: localhost
-    port: 5432
-application:
-  datasource:
-    jdbcUrl: jdbc:database://${services.database.host}:${services.database.port}/database
