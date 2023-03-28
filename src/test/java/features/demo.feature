@@ -8,4 +8,4 @@ Feature: Demo Test
     Scenario: Demo Scenario
         * print 'demo scenario'
         * print 'jdbcUrl: ' + database.jdbcUrl
-        * print functions.replacePlaceholders('INSERT ${services.database.port}', configuration.yaml)
+        * print functions.replacePlaceholders('INSERT ${services.database.port}', configuration.yamlConfiguration)

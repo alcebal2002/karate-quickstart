@@ -10,7 +10,7 @@ function fn() {
             jdbcUrl: configYaml.application.datasource.jdbcUrl
         },
         configuration: {
-            yaml: configYaml
+            yamlConfiguration: configYaml
         },
         functions: {
             replacePlaceholders: replacePlaceholders
