@@ -5,7 +5,11 @@ Feature: Demo Test
         * print 'background setup'
         * print 'baseUrl: ' + baseUrl
     
-    Scenario: Demo Scenario
-        * print 'demo scenario'
+    Scenario: Demo Scenario 1
+        * print 'demo scenario 1'
         * print 'jdbcUrl: ' + database.jdbcUrl
-        * print functions.replacePlaceholders('INSERT ${services.database.port}', configuration.yamlConfiguration)
+
+    Scenario: Demo Scenario 2
+        * print 'demo scenario 2'
+        * def queries = read('classpath:json/queries.json')
+        * print functions.replacePlaceholders(queries.insert, configuration.yamlConfiguration)
