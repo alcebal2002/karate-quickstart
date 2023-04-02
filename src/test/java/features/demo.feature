@@ -6,8 +6,9 @@ Feature: Demo Test
         * print 'baseUrl: ' + baseUrl
     
     Scenario: Demo Scenario 1
+        * print variableFromKarateBase
         * print 'demo scenario 1'
-        * print 'jdbcUrl: ' + database.jdbcUrl
+        * print 'jdbcUrl: ' + functions.replacePlaceholders(database.jdbcUrl, configuration.yamlConfiguration)
 
     Scenario: Demo Scenario 2
         * print 'demo scenario 2'
