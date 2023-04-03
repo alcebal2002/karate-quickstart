@@ -1,6 +1,5 @@
 function fn() {   
     return { 
-        functionFromKarateBase: function(){ return 'fromKarateBase' },
-        variableFromKarateBase: 'valueFromKarateBase'
+        uuid: function () { return java.util.UUID.randomUUID() + '' }
     }
   }
