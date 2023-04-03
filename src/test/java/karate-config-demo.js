@@ -11,6 +11,6 @@ function fn() {
         }
     };
 
-    karate.log('config replaced: ' + replacePlaceholders(config,configYaml));
+    karate.log('config replaced: ' + karate.pretty(replacePlaceholders(config,configYaml)));
     return replacePlaceholders(config,configYaml);
 }
