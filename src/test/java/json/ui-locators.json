@@ -1,0 +1,14 @@
+{
+    "login": {
+        "input": {
+            "username": "#login_field",
+            "password": "#password"
+        },
+        "btn": {
+            "commit": "input[name=commit]"
+        },
+        "label": {
+            "error": ".flash-error"
+        }
+    }
+}
