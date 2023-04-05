@@ -4,6 +4,20 @@ Feature: Demo Test
     Background: background setup
         * print 'background setup'
         * print 'baseUrl: ' + baseUrl
+        * configure afterScenario = 
+        """
+        function(){
+            karate.log('after scenario:', karate.scenario.name);
+            karate.call('after-scenario.feature', { caller: karate.feature.fileName });
+        }
+        """
+        * configure afterFeature = 
+        """
+        function(){
+            karate.log('after feature:', karate.scenario.name);
+            karate.call('after-feature.feature', { caller: karate.feature.fileName });
+        }
+        """
     
     Scenario: Demo Scenario 1
         * print 'uuid(): ' + uuid()
