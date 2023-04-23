@@ -9,6 +9,9 @@ import org.slf4j.LoggerFactory;
 
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
+
+import utils.CucumberReportUtil;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
@@ -27,7 +30,10 @@ public class DemoRunner {
     void testDemo() {
         logger.info("Running testDemo");
         Results result = Runner.path("classpath:features")
+                .outputCucumberJson(true)
                 .parallel(1);
+
+        CucumberReportUtil.generateReport(result.getReportDir(), "demo");
 
         assertEquals(0, 0, "Do not fail. Continue");
     }
