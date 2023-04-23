@@ -4,16 +4,16 @@ Feature: Demo Test
     Background: background setup
         * print 'background setup'
         * print 'baseUrl: ' + baseUrl
-        # afterScenario and afterFeature hooks can be set in two different ways:
+        # afterScenario and afterFeature hooks can be set in three different ways:
         # 1. as part of any of the karate-base or karate-config (eg. afterScenario set in karate-base)
-        # 2. directly in the feature file like the following afterFeature
-        * configure afterFeature = 
-        """
-        function(){
-            karate.log('after feature:', karate.scenario.name);
-            karate.call('after-feature.feature', { caller: karate.feature.fileName });
-        }
-        """
+        # 2. directly in the feature file specifying the function
+        # """
+        # function(){
+        #     karate.call('after-feature.feature', { caller: karate.feature.fileName });
+        # }
+        # """
+        # 3. using a javascript file directly from the feature
+        * configure afterFeature = read('classpath:js/after-feature.js')
     
     Scenario: Demo Scenario 1
         * print 'uuid(): ' + uuid()

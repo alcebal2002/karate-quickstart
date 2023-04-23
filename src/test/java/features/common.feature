@@ -1,4 +1,4 @@
-@demos
+@ignore
 Feature: Common Feature Test
 
     Background: background setup

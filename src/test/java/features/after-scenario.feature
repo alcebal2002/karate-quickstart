@@ -2,4 +2,4 @@
 Feature: After Scenario
 
     Scenario:
-        * print 'in "after-scenario.feature", caller:', caller
+        * print 'in after-scenario.feature, caller:', caller
