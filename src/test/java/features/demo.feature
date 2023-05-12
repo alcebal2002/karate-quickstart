@@ -7,6 +7,7 @@ Feature: Demo Test
         # afterScenario and afterFeature hooks can be set in three different ways:
         # 1. as part of any of the karate-base or karate-config (eg. afterScenario set in karate-base)
         # 2. directly in the feature file specifying the function
+        # * configure afterFeature = 
         # """
         # function(){
         #     karate.call('after-feature.feature', { caller: karate.feature.fileName });
