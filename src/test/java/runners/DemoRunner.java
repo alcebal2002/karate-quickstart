@@ -31,6 +31,7 @@ public class DemoRunner {
         logger.info("Running testDemo");
         Results result = Runner.path("classpath:features")
                 .outputCucumberJson(true)
+                .tags("@demos")
                 .parallel(1);
 
         CucumberReportUtil.generateReport(result.getReportDir(), "demo");

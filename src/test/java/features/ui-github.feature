@@ -1,3 +1,4 @@
+@demos @ui-github
 Feature: browser automation 1
 
   Background:
