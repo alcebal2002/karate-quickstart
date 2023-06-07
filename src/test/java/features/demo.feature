@@ -1,4 +1,4 @@
-@demos
+@demos @demo-test
 Feature: Demo Test
 
     Background: background setup

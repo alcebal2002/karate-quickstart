@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
+import com.intuit.karate.core.MockServer;
 
 import utils.CucumberReportUtil;
 
@@ -20,10 +21,16 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 public class DemoRunner {
 
     static final Logger logger = LoggerFactory.getLogger(DemoRunner.class);
+    static MockServer petStoreServer;
+    static int petStoreServerPort = 8090;
 
     @BeforeAll
     public void beforeAll() {
         logger.info("Running beforeAll()");
+        logger.info("Setting up PetStore mock server in port " + petStoreServerPort);
+        petStoreServer = MockServer
+                .feature("classpath:mock/petstore.feature")
+                .http(petStoreServerPort).build();
     }
 
     @Test
@@ -31,7 +38,7 @@ public class DemoRunner {
         logger.info("Running testDemo");
         Results result = Runner.path("classpath:features")
                 .outputCucumberJson(true)
-                .tags("@demos")
+                .tags("@petstore")
                 .parallel(1);
 
         CucumberReportUtil.generateReport(result.getReportDir(), "demo");
@@ -42,6 +49,7 @@ public class DemoRunner {
     @AfterAll
     public void afterAll() {
         logger.info("Running afterAll()");
+        logger.info("Shutting down PetStore mock server");
+        petStoreServer.stop();
     }
-
 }
