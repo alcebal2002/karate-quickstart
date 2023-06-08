@@ -14,7 +14,8 @@ Feature: PetStore Test
 
     Scenario: Get FindByStatus
         Given path '/pet/findByStatus'
-        And param status = 'SLEEP'
+        And params { status: 'SLEEP' }
         When method GET
         Then status 200
         And response[0].id == 1
+
